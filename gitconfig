@@ -1,0 +1,18 @@
+[user]
+	email = c.oelrichs@gmail.com
+	name = c.oelrichs
+
+[alias]
+	a = add
+	c = commit -m
+	s = status --short
+	ac = !git add -A && git commit -m
+	ph = push origin $(git rev-parse --abbrev-ref HEAD)
+	pl = pull --rebase --prune origin $(git rev-parse --abbrev-ref HEAD)
+	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	amend = commit --amend --no-edit
+	f = fetch --all && git rebase origin/master
+	nb = checkout -b
+	# save = !git add -A && git commit -m 'SAVEPOINT'
+	# wip = commit -am "WIP"
+	# undo = reset HEAD~1 --mixed
